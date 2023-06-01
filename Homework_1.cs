@@ -41,11 +41,7 @@ namespace Kristina_Kulich__Application
         {
             string a;
             string b;
-            /*List<string> babe = new List<string>();
-            babe[0] = Console.ReadLine();
             
-            babe[1] = Console.ReadLine();
-            babe[2] = Console.ReadLine();*/
             Console.WriteLine("Input one symbol integer:");
             Console.WriteLine("Input two symbol integer:");
             Console.WriteLine("Input three symbol integer:");
@@ -76,6 +72,7 @@ namespace Kristina_Kulich__Application
             Console.WriteLine(("Input opposite to adjective"));
             string adjective_opposite = Console.ReadLine();
             string poem_new = poem.Replace(adjective, adjective_opposite);
+            Console.WriteLine(poem_new);
         }
 
         public void Task_6()
