@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Kristina_Kulich__Application/1.0.0": {
+        "runtime": {
+          "Kristina_Kulich__Application.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kristina_Kulich__Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
