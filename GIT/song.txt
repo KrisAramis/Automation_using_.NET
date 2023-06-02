@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 No Geography,
 The chemical brothers
 
+=======
+>>>>>>> master
 If you ever change your mind about leaving it all behind
 Remember, remember, no geography
 If you ever change your mind about leaving it all behind
@@ -10,6 +13,7 @@ Him and her, and them too
 And you, and me too
 I'll take you along, I'll take you along with me
 I'll take you along with me
+<<<<<<< HEAD
 I'll take you along with me
 If you ever change your mind about leaving it all behind
 Remember, remember, no geography
@@ -19,3 +23,6 @@ And you, and me too
 I'll take you along, I'll take you along with me
 I'll take you along with me
 I'll take you along with me
+=======
+I'll take you along with me
+>>>>>>> master
