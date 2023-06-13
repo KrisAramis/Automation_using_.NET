@@ -13,9 +13,10 @@ class Program
      new Homework_1().Task_4();
      new Homework_1().Task_5();
      new Homework_1().Task_6();*/
-    new Homework_3().Task_1();
+    //new Homework_3().Task_1();
     new Homework_3().Task_2();
     new Homework_3().Task_3();
+    
     }
     
     
