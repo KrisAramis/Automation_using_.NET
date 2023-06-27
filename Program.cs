@@ -1,5 +1,6 @@
 ﻿using Kristina_Kulich__Application;
 using Kristina_Kulich__Application.CSharpOOP2;
+using Kristina_Kulich__Application.CSharpOOP4;
 
 class Program
 {
@@ -61,6 +62,15 @@ class Program
 
         #region StaticMethod
         Car.RepaintCar(matiz);
+        #endregion
+
+        #region Ierarchy classes exemplares
+        Cylinder cyl = new Cylinder("cylinder", 23, 10);
+        cyl.ShapeInfo();
+        Ball smallBall = new Ball("ball", 10);
+        smallBall.ShapeInfo();
+        Pyramid egiptPyramid = new Pyramid("Faraoh", 10, 10);
+        var pyramidHeight = egiptPyramid._height;
         #endregion
     }
 }
