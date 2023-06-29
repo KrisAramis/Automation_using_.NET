@@ -1,4 +1,5 @@
 ﻿using Kristina_Kulich__Application;
+using Kristina_Kulich__Application.CSharpCollections1;
 using Kristina_Kulich__Application.CSharpOOP2;
 using Kristina_Kulich__Application.CSharpOOP4;
 
@@ -72,5 +73,41 @@ class Program
         Pyramid egiptPyramid = new Pyramid("Faraoh", 10, 10);
         var pyramidHeight = egiptPyramid._height;
         #endregion
+        egiptPyramid.ShapeInfo();
+
+        #region Separate massive into 2
+
+        Collections coll = new Collections();
+        //coll.FillEvenNumbersMassive(); have error
+
+        #endregion
+
+        #region Sort Lastnames
+        coll.SortLastnames();
+        #endregion
+
+        #region Citizens
+
+        {
+            List<Citizen> citizensofBobruisk = new List<Citizen>();
+            citizensofBobruisk.Add(new Citizen(){LastnameNameFathername = "Malinowski Henric Vladzimiravich", HomeAddress = "Malinava 24", BirthDate = new(2011,6,10)});
+            citizensofBobruisk.Add(new Citizen(){LastnameNameFathername = "Macej Grink Aliaksandravich", HomeAddress = "Hrusheva 84", BirthDate = new(1991,6,10)});
+            citizensofBobruisk.Add(new Citizen(){LastnameNameFathername = "Teodorovich Jupiter Vasily", HomeAddress = "Malinava 4", BirthDate = new(2001,6,10)});
+
+            void SortCitizensAlphabetically()
+            {
+                IEnumerable<string> query = from citizen in citizensofBobruisk
+                    orderby citizen.LastnameNameFathername
+                    select citizen.LastnameNameFathername;
+  
+                foreach (string citizen in query) 
+                Console.WriteLine(citizen);  
+            }
+            Console.WriteLine(citizensofBobruisk.Where(HomeAddress => HomeAddress.Equals("Malinava 24")).ToList());
+        }
+        #endregion
     }
+
+
+    
 }
