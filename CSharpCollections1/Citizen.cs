@@ -8,7 +8,7 @@ public class Citizen
     
     //interesting where such methods are placed because they are referring to list but not purely class
     
-    /*public void SortCitizensAlphabetically(List<Citizen> citizens)
+    public void SortCitizensAlphabetically(List<Citizen> citizens)
     {
         IEnumerable<string> query = from citizen in citizens 
             orderby  LastnameNameFathername
@@ -16,7 +16,5 @@ public class Citizen
   
         foreach (string lastname in query)  
             Console.WriteLine(lastname);  
-    }*/
-   
-    
+    }
 }
