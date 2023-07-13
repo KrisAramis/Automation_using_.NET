@@ -6,11 +6,17 @@ class Program
 {
     static void Main(string[] args)
     {
-     new Homework_1().Task_1();   
-     new Homework_1().Task_2();
-     new Homework_1().Task_3();
-     new Homework_1().Task_4();
-     new Homework_1().Task_5();
-     new Homework_1().Task_6();
+        // Создаем разработчиков
+        IDeveloper carDeveloper = new CarDeveloper();
+        IDeveloper bikeDeveloper = new BikeDeveloper();
+        IDeveloper busDeveloper = new BusDeveloper();
+        IDeveloper truckDeveloper = new TruckDeveloper();
+
+        // Создаем объекты транспорта с использованием метода Create()
+        IVehicle car = carDeveloper.Create();
+        IVehicle bike = bikeDeveloper.Create();
+        IVehicle bus = busDeveloper.Create();
+        bus.GetInfo();
+        IVehicle truck = truckDeveloper.Create();
      }
 }
