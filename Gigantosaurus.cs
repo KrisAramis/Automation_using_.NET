@@ -8,7 +8,7 @@ public class Gigantosaurus : IGigantosaurus
     }
     
     //this is basic class which describes basic functionality
-    public virtual void Roar()
+    public void Roar()
     {
         string sound = "Dianosaurous roars";
         Console.WriteLine(sound);
