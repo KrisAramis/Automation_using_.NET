@@ -64,13 +64,14 @@ class Program
         Car.RepaintCar(matiz);
         #endregion
 
+        double r = 3.0, h = 5.0, s = 40;
         #region Ierarchy classes exemplares
-        Cylinder cyl = new Cylinder("cylinder", 23, 10);
+        Shape cyl = new Cylinder("cylinder", h, r);
+        Shape ball = new Ball("basketball ball", r);
+        Shape egyptPyramid = new Pyramid("Egipt pyramid", h, s);
         cyl.ShapeInfo();
-        Ball smallBall = new Ball("ball", 10);
-        smallBall.ShapeInfo();
-        Pyramid egiptPyramid = new Pyramid("Faraoh", 10, 10);
-        var pyramidHeight = egiptPyramid._height;
+        ball.ShapeInfo();
+        egyptPyramid.ShapeInfo();
         #endregion
     }
 }

@@ -4,6 +4,12 @@ public abstract class Shape
 {
  private string _name;
 
+ public string Name 
+ { 
+  get=> Name = _name;
+  set { }
+ }
+ 
  public Shape ()
  { }
 
@@ -14,5 +20,8 @@ public abstract class Shape
 
  public abstract double GetSquare();
 
- public abstract void ShapeInfo();
+ public virtual void ShapeInfo()
+ {
+  Console.WriteLine($"This is {_name}");
+ }
 }

@@ -2,13 +2,13 @@
 
 public class Cylinder:Shape
 {
-    public string _name;
     public double _radius;
+    
     public double _height;
-
-    public Cylinder(string name, double height, double radius)
+    
+    
+    public Cylinder(string name, double height, double radius):base(name)
     {
-        _name = name;
         _height = height;
         _radius = radius;
     }
@@ -20,6 +20,6 @@ public class Cylinder:Shape
 
     public override void ShapeInfo()
     {
-        Console.WriteLine($"{_name} has square {this.GetSquare()}");
+        Console.WriteLine("Area of {0}   = {1:F2}",Name, this.GetSquare());
     }
 }

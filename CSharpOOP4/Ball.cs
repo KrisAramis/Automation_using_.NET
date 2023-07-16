@@ -2,19 +2,16 @@
 
 public class Ball : Shape
 {
-    public string _name;
-    public double _radius;
-
-
-    public Ball(string name, double radius)
+    private double _radius;
+    
+    public Ball(string name, double radius):base(name)
     {
-        this._name = name;
         this._radius = radius;
     }
 
     public override void ShapeInfo()
     {
-        Console.WriteLine($"{_name} has square {this.GetSquare()}");
+        Console.WriteLine("Area of {0}   = {1:F2}",Name, this.GetSquare());
     }
 
     public override double GetSquare()
