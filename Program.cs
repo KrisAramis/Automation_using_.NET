@@ -6,6 +6,11 @@ class Program
 {
     static void Main(string[] args)
     {
+        IGigantosaurus gosha = new Gigantosaurus();
+        IGigantosaurus loudDecorator = new LoudGigantosarusDecorator(gosha);
+        loudDecorator.Roar();
+        IGigantosaurus extraLoudDecorator = new ExtraLoudGigantosaurusDecorator(gosha);
+        extraLoudDecorator.Roar();
         // Создаем разработчиков
         IDeveloper carDeveloper = new CarDeveloper();
         IDeveloper bikeDeveloper = new BikeDeveloper();

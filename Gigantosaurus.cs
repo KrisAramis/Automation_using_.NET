@@ -2,9 +2,15 @@
 
 public class Gigantosaurus : IGigantosaurus
 {
-    //this is basic class which describs basic functionality
-    public  void Roar()
+    public Gigantosaurus()
     {
-        Console.WriteLine("Dianosaurous roars");
+        
+    }
+    
+    //this is basic class which describes basic functionality
+    public virtual void Roar()
+    {
+        string sound = "Dianosaurous roars";
+        Console.WriteLine(sound);
     }
 }

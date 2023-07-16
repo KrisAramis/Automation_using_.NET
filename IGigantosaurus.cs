@@ -2,8 +2,6 @@
 
 public interface IGigantosaurus
 {
-    public void Roar()
-    {
-        
-    }
+    public virtual void Roar()
+    {}
 }

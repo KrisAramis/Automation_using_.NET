@@ -1,13 +1,18 @@
 ﻿namespace Kristina_Kulich__Application;
 
-public class ExtraLoudGigantosaurusDecorator:LoudGigantosarusDecorator
+public class ExtraLoudGigantosaurusDecorator:IGigantosaurus
 {
     //this is decorator that's responsible for extra loud sounds without creating or modifying basic class Gigantosaurus
-    public ExtraLoudGigantosaurusDecorator( IGigantosaurus gigantosaurus):base(gigantosaurus){}
-   
-    public override void Roar()
+    protected IGigantosaurus _gigantosaurus;
+
+    public ExtraLoudGigantosaurusDecorator (IGigantosaurus gigantosaurus)
     {
-        base.Roar();
-        Console.WriteLine("It's really louddd");
+        _gigantosaurus = gigantosaurus;
+    }
+
+    public void Roar()
+    {
+        _gigantosaurus.Roar();
+        Console.WriteLine("EXTRA LOOOOUd");
     }
 }
