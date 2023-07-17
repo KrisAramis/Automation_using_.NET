@@ -2,6 +2,7 @@
 
 using Kristina_Kulich__Application;
 using Kristina_Kulich__Application.CSharpOOP2;
+using Kristina_Kulich__Application.CSharpBasics3;
 
 class Program
 {
