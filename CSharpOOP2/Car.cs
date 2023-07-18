@@ -1,14 +1,72 @@
-﻿namespace Kristina_Kulich__Application.CSharpOOP2;
+﻿using System.Runtime.CompilerServices;
+
+namespace Kristina_Kulich__Application.CSharpOOP2;
 
 public class Car
 {
-    public string Model;
-    public int ProductionYear = 2020;
-    public bool Diesel;
-    public double FillLevel;
+    private string _model;
+    private int _productionYear = 2020;
+    private static bool _diesel;
+    private static bool _isOpen;
+    private string _color;
+    private static double _filllevel;
+    private bool _engineIsRunning;
+    private string _vinNumber;
 
-    public bool EngineIsRunning { get; set; }
+    public int ProductionYear
+    {
+        get { return _productionYear; }
+        set { _productionYear = value; }
+    }
 
+    public string Color
+    {
+        get { return _color;}
+        set { _color = value; }
+    }
+    public static bool Diesel
+    {
+        get { return _diesel; }
+        set { _diesel = value; }
+    }
+    
+    public string Model
+    {
+        get { return _model; }
+        set { _model = value; }
+    }
+
+    public static double FillLevel 
+    {
+        get{ return _filllevel; }
+        set { _filllevel = value; }
+    }
+    public bool EngineIsRunning
+    {
+        get { return _engineIsRunning; }
+        set { _engineIsRunning = value; }
+    }
+    public string VinNumber
+    {
+        set { _vinNumber=value; }
+    }
+    
+    public Car()
+    {
+        
+    }
+
+    public Car(int productionYear)
+    {
+        ProductionYear = _productionYear;
+    }
+
+    public Car(string model, int productionYear, double fillLevel)
+    {
+        Model = model;
+        ProductionYear = productionYear;
+        FillLevel = fillLevel;
+    }
     internal void EngineStart()
     {
         if (!EngineIsRunning&&FillLevel>0)
@@ -27,34 +85,16 @@ public class Car
     public string ReturnModel()
     {
         return Model;
-        //Console.WriteLine($"Your model is {Model}");
     }
     
-    public void Refuel(double liters)
-    {
-        FillLevel += liters;
-        if(FillLevel > 60)
-        {
-            FillLevel = 60;
-        }
-    }
-    
-    public Car()
-    {
-        
-    }
+    public static void Beep()
+     {
+         Console.WriteLine("Beeeeeeep");
+     }
 
-    public Car(int productionYear)
+    public void ChooseColor(string color)
     {
-        ProductionYear = productionYear;
-    }
-
-    public Car(string model, int productionYear, bool diesel, double fillLevel)
-    {
-        Model = model;
-        ProductionYear = productionYear;
-        Diesel = diesel;
-        FillLevel = fillLevel;
+        Color = color;
     }
 }
 
