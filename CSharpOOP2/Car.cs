@@ -4,16 +4,53 @@ namespace Kristina_Kulich__Application.CSharpOOP2;
 
 public class Car
 {
-    public string Model;
-    public int ProductionYear = 2020;
-    public bool Diesel;
-    public static bool IsOpen;
-    public string Color;
+    private string _model;
+    private int _productionYear = 2020;
+    private static bool _diesel;
+    private static bool _isOpen;
+    private string _color;
+    private static double _filllevel;
+    private bool _engineIsRunning;
+    private string _vinNumber;
 
- 
-    public double FillLevel { get; private set; }
-    public bool EngineIsRunning { get; private set; }
-    public string VinNumber { private get; set; }
+    public int ProductionYear
+    {
+        get { return _productionYear; }
+        set { _productionYear = value; }
+    }
+
+    public string Color
+    {
+        get { return _color;}
+        set { _color = value; }
+    }
+    public static bool Diesel
+    {
+        get { return _diesel; }
+        set { _diesel = value; }
+    }
+    
+    public string Model
+    {
+        get { return _model; }
+        set { _model = value; }
+    }
+
+    public static double FillLevel 
+    {
+        get{ return _filllevel; }
+        set { _filllevel = value; }
+    }
+    public bool EngineIsRunning
+    {
+        get { return _engineIsRunning; }
+        set { _engineIsRunning = value; }
+    }
+    public string VinNumber
+    {
+        set { _vinNumber=value; }
+    }
+    
     public Car()
     {
         
@@ -21,14 +58,13 @@ public class Car
 
     public Car(int productionYear)
     {
-        ProductionYear = productionYear;
+        ProductionYear = _productionYear;
     }
 
-    public Car(string model, int productionYear, bool diesel, double fillLevel)
+    public Car(string model, int productionYear, double fillLevel)
     {
         Model = model;
         ProductionYear = productionYear;
-        Diesel = diesel;
         FillLevel = fillLevel;
     }
     internal void EngineStart()
@@ -49,24 +85,16 @@ public class Car
     public string ReturnModel()
     {
         return Model;
-        //Console.WriteLine($"Your model is {Model}");
     }
     
-    public void Refuel(double liters)
-    {
-        FillLevel += liters;
-        if(FillLevel > 60)
-        {
-            FillLevel = 60;
-        }
-    }
     public static void Beep()
      {
          Console.WriteLine("Beeeeeeep");
      }
-    public static void RepaintCar(Car car, string newColor = "blue")
-        {
-            car.Color = newColor;
-        }
+
+    public void ChooseColor(string color)
+    {
+        Color = color;
+    }
 }
 
