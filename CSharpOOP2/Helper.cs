@@ -5,12 +5,11 @@ using System.Runtime;
 
 public static class CarHelper
 {
-    
     public static void RepaintCar(this Car car, string newColor)
     {
         car.Color = newColor;
     }
-    public static void Refuel(Car car, double liters)
+    public static void Refuel(this Car car, double liters)
     {
         Car.FillLevel += liters;
         if(Car.FillLevel > 60)
@@ -42,5 +41,4 @@ public static class CarHelper
     {
         car.EngineIsRunning = false;
     }
-    
 }

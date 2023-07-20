@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 namespace Kristina_Kulich__Application;
 
-public class FlowerRepaint<T> 
+public class FlowerRepaint<T> where T:Flower
 {
-    public static void RepaintFlower(Flower flower, string newcolor, double upsell = 0.15)
+   // public T Color { get; set; }
+    public static void RepaintFlower( T item, string newcolor, double upsell = 0.15) 
     {
-        flower.Color = newcolor;
-        flower.Color = newcolor;
-        flower.Price = flower.Price*(1+upsell);
+        item.Color = newcolor;
+        item.Price = item.Price*(1+upsell);
     }
 }
