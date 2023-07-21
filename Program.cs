@@ -5,6 +5,8 @@ using Kristina_Kulich__Application.CSharpOOP4;
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices.JavaScript;
 
 class Program
