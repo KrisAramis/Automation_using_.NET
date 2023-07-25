@@ -10,21 +10,10 @@ namespace Kristina_Kulich__Application;
 public class Cheque : IEquatable<Cheque>
 {
     public string Productname { get; set; }
-    /*private decimal _price;
-    public string Price
-    {
-        get { return string.Format("{0:C}", _price); }
-    }*/
     public double Quantity { get; set; }
     public decimal Price { get; set; }
     public decimal Sum { get; set; }
-
-
-    /*public double Sum
-    {
-        get { return sum; }
-        set { sum = this.CalculateSum(); }
-    }*/
+    
     public bool Equals(Cheque? other)
     {
         throw new NotImplementedException();
@@ -74,7 +63,6 @@ public class Homework_2
         Console.WriteLine("Input your favorite number from 1-10:");
         short.TryParse(Console.ReadLine(), out short luckynumber);
         Console.WriteLine(String.Format("Your lucky number is: {0}", luckynumber));
-
     }
 
     public void Task_3()
@@ -82,6 +70,7 @@ public class Homework_2
         int somevar = 0;
         bool result = int.TryParse(Console.ReadLine(), out somevar);
         Console.WriteLine($"You've inputted number: {somevar}");
+        Console.WriteLine($"You've updated variable somevar: {result}");
     }
 
     public void Task_4()
@@ -109,8 +98,6 @@ public class Homework_2
         foreach (var product in auchan)
         {
             Console.WriteLine(product.ToString() + "  pay: " + String.Format("{0:C}", product.CalculateSum()));
-            //double productsum = product.Price * product.Quantity;
-            //Console.WriteLine(product.CalculateSum());
             finalsum += product.Sum;
         }
 
@@ -159,6 +146,12 @@ public class Homework_2
         bool d = 4 != 3;
         bool e = 4 <= 4.5;
         Console.WriteLine($"{a}, {b}, {c}, {d}, {e}");
+        a = 4 == 5;
+        b = false && false == !false;
+        c = (5 * 0 < -1) || (4.9 == 4.90) == false;
+        d = 4 != 4.0;
+        e = 5 <= 89;
+        Console.WriteLine($"{a}, {b}, {c}, {d}, {e}");
     }
 
     public void Task_8()
@@ -186,7 +179,6 @@ public class Homework_2
         a = (short)b; //implicit
         b = a; //explicit ?? (неявное)a
     }
-
 }
 
 
