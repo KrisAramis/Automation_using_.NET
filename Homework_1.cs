@@ -81,10 +81,27 @@ namespace Kristina_Kulich__Application
             string lowcase = Console.ReadLine();
             string convertedtoupper = lowcase.ToUpper();
             Console.WriteLine(convertedtoupper);
-            
+            int a = 2;
+            a = --a * a;
+            Console.WriteLine(a);
+
+            string lampcolor = Console.ReadLine();
+            switch (lampcolor)
+            {
+                case("yellow"): 
+                    Console.WriteLine("Wait");
+                    break;
+                case("red"):
+                    Console.WriteLine("STOP");
+                    break; case("green"):
+                    Console.WriteLine("You can go)");
+                    break;
+                default:
+                    Console.WriteLine("watch out");
+                    break;
+            }
         }
-    
-}
+    }
 }
 
 
