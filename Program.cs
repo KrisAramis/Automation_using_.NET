@@ -1,6 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Globalization;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices.JavaScript;
 using Kristina_Kulich__Application;
+using Kristina_Kulich__Application.Helper;
+using Kristina_Kulich__Application.CSharpLinq;
+﻿using System.Text.Unicode;
+using Kristina_Kulich__Application;
+using Kristina_Kulich__Application.CSharpOOP2;
+using Kristina_Kulich__Application.CSharpBasics3;
 
 class Program
 {
