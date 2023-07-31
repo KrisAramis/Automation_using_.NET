@@ -5,17 +5,17 @@ using Xunit.Sdk;
 
 namespace TestProject1;
 
-public class CalculatorTests
+public class TestsforCalculatorPart2
 {
     private Calculator _calculatorInstance;
 
-    public CalculatorTests()
+    public TestsforCalculatorPart2()
     {
         _calculatorInstance = new Calculator();
     }
 
     [Fact]
-    public void NotNegativeFalseWhenPositive()
+    public void NotNegativeFalseTest()
     {
         object a = 4;
         bool result = _calculatorInstance.isNegative(a);
@@ -49,7 +49,7 @@ public class CalculatorTests
     }
 
     [Fact]
-    public void CosReturnsCorrect()
+    public void CosReturnsCorrectRusult()
     {
         double angle = -30;
         double expectedResult = Math.Cos(angle);
@@ -59,7 +59,7 @@ public class CalculatorTests
 
     [Theory]
     [InlineData(2, 3)]
-    public void PowReturnsCorrect(int firstNumber, double secondNumber)
+    public void PowReturnsCorrectResult(int firstNumber, double secondNumber)
     {
         double expectedResult = 8;
         double actualResult = _calculatorInstance.Pow(firstNumber, secondNumber);
@@ -68,7 +68,7 @@ public class CalculatorTests
     
     [Theory]
     [InlineData(2, 1)]
-    public void AddReturnsCorrect(double firstNumber, double secondNumber)
+    public void AddReturnsCorrectResult(double firstNumber, double secondNumber)
     {
         double expectedResult = 3;
         double actualResult = _calculatorInstance.Add(firstNumber, secondNumber);

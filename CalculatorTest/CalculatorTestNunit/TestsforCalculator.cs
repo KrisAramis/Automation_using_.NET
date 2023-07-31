@@ -3,14 +3,15 @@ using NUnit.Framework;
 
 namespace CalculatorTest;
 
-public class Tests
+public class TestsforCalculator
 {
+    private Calculator _calculator;
+
     [OneTimeSetUp]
     public void ClassInitialize()
         {
             Console.WriteLine("Class init");
         }
-    private Calculator _calculator;
 
     [SetUp]
     public void TestInitialize()
@@ -28,7 +29,7 @@ public class Tests
 
     [Test]
     [TestCase(3,0,0)]
-    public void MultiplyReturnCorrect(double firstNumber, double secondNumber, double expectedResult)
+    public void MultiplyReturnCorrectResult(double firstNumber, double secondNumber, double expectedResult)
     {
         double actualResult = _calculator.Multiply(firstNumber, secondNumber);
         Assert.AreEqual(actualResult,expectedResult);
@@ -45,11 +46,11 @@ public class Tests
     }
 
     [Test]
-    public void AbsReturnsCorrect()
+    public void AbsReturnsCorrectResultTest()
     {
         double a = -11;
         double actualResult = _calculator.Abs(a);
-        Assert.False(actualResult == a);
+        Assert.False(actualResult.Equals(a));
     }
     
     [TestCase(22, 11, 2)]
@@ -58,6 +59,7 @@ public class Tests
         var actualQuotient = _calculator.Divide(firstNumber, secondNumber);
         Assert.AreEqual(actualQuotient,expectedQuotient);
     }
+    
     [Test]
     [TestCase(null, 2)]
     [TestCase(2,8)]
@@ -65,7 +67,6 @@ public class Tests
     {
         Assert.Throws<NotFiniteNumberException>(() => _calculator.Pow(a, b));
     }
-
     
     [TestCase(4, 2)]
     public void SqrtTest(double number, double expectedSqrt)
