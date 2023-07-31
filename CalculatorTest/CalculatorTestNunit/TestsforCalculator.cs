@@ -27,7 +27,25 @@ public class Tests
     }
 
     [Test]
-    public void Abs()
+    [TestCase(3,0,0)]
+    public void MultiplyReturnCorrect(double firstNumber, double secondNumber, double expectedResult)
+    {
+        double actualResult = _calculator.Multiply(firstNumber, secondNumber);
+        Assert.AreEqual(actualResult,expectedResult);
+    }
+
+    [Test]
+    public void SubNegativeTest()
+    {
+        double firstNumber = -3;
+        double secondNumber = 3;
+        double notValidResult = 6;
+        double actualResult = _calculator.Sub(firstNumber, secondNumber);
+        Assert.False(actualResult== notValidResult);
+    }
+
+    [Test]
+    public void AbsReturnsCorrect()
     {
         double a = -11;
         double actualResult = _calculator.Abs(a);
