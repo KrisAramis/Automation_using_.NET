@@ -1,4 +1,4 @@
-﻿using System.Runtime.CompilerServices;
+using System.Runtime.CompilerServices;
 
 namespace Kristina_Kulich__Application.CSharpOOP2;
 
@@ -96,5 +96,4 @@ public class Car
     {
         Color = color;
     }
-}
-
+  }
