@@ -8,4 +8,8 @@
         <RootNamespace>Kristina_Kulich__Application</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Compile Remove="Homework_3.cs" />
+    </ItemGroup>
+
 </Project>

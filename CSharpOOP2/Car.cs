@@ -1,5 +1,6 @@
-﻿namespace Kristina_Kulich__Application.CSharpOOP2;
 using System.Runtime.CompilerServices;
+
+namespace Kristina_Kulich__Application.CSharpOOP2;
 
 public class Car
 {
@@ -87,12 +88,12 @@ public class Car
     }
     
     public static void Beep()
-    {
-        Console.WriteLine("Beeeeeeep");
-    }
+     {
+         Console.WriteLine("Beeeeeeep");
+     }
 
     public void ChooseColor(string color)
     {
         Color = color;
     }
-}
+  }

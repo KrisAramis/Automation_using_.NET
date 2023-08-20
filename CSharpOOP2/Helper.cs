@@ -1,15 +1,17 @@
-﻿namespace Kristina_Kulich__Application.CSharpOOP2;
 
-using System.Linq;
+﻿using System.Linq;
 using System.Runtime;
+
+namespace Kristina_Kulich__Application.CSharpOOP2;
 
 public static class CarHelper
 {
-    public static void RepaintCar(this Car car, string newColor)
+    
+    public static void RepaintCar(Car car, string newColor)
     {
         car.Color = newColor;
     }
-    public static void Refuel(this Car car, double liters)
+    public static void Refuel(double liters)
     {
         Car.FillLevel += liters;
         if(Car.FillLevel > 60)
@@ -18,7 +20,7 @@ public static class CarHelper
         }
     }
 
-    public static void ReturnCarInfo(this Car car)
+    public static void ReturnCarInfo(Car car)
     {
         Console.WriteLine($"{car.Model} produced in {car.ProductionYear} has {car.Color} color.");
     }
@@ -35,10 +37,5 @@ public static class CarHelper
         const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         return new string(Enumerable.Repeat(chars, length)
             .Select(s => s[random.Next(s.Length)]).ToArray());
-    }
-
-    public static void StopEngine(this Car car)
-    {
-        car.EngineIsRunning = false;
     }
 }

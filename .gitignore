@@ -145,8 +145,7 @@ UpgradeLog*.htm
 *.swo
 
 # Temp files when opening LibreOffice on ubuntu
-.~lock.*
-
+.~lock.
 # svn
 .svn
 
@@ -238,14 +237,12 @@ AppPackages/
 *.userprefs
 # Mono auto generated files
 mono_crash.*
-<<<<<<< HEAD
 
 #rider specific files 
 .DS_Store
 .idea
 
 =======
->>>>>>> 55e425e (add updated gitignore to main)
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
